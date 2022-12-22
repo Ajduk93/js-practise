@@ -3,7 +3,7 @@ let currentRes= defaultRes;
 let logOpt=[];
 
 function getUserInput() {
-    return +inputNumber.value;   // funkcija za unete korisnicke parametre RETURN povlaci unete parametre i pretvara ih u broj uz pomoc konvertora +(varijabila) //
+    return +inputNumber.value; 
 }
 
 function outputValue (previousResult , operator , currentInput) { 
@@ -24,7 +24,7 @@ console.log(logOpt);
 
 }
 
-//   Sabiranje //
+//   Adding //
 
 function add(){
 const computedNumber = getUserInput();
@@ -34,7 +34,7 @@ outputValue(initResult,'+', computedNumber);
 writeOperationsLog( 'Add', initResult , computedNumber, currentRes);
 }
 
-// Oduzimanje //
+// Subtract //
 
 function subtract(){
     const computedNumber = getUserInput();
@@ -44,6 +44,8 @@ function subtract(){
     writeOperationsLog ("Subtract",initResult,computedNumber,currentRes);
 }
 
+// Multiply //
+
 function multiply(){
     const computedNumber = getUserInput();
     const initResult = currentRes;
@@ -51,6 +53,9 @@ function multiply(){
     outputValue(initResult,'*',computedNumber);
     writeOperationsLog ("Multiply",initResult,computedNumber,currentRes);
 }
+
+// Divide //
+
 function divide(){
     const computedNumber = getUserInput();
     const initResult = currentRes;
@@ -58,6 +63,10 @@ function divide(){
     outputValue(initResult,'/',computedNumber);
     writeOperationsLog ("Divide",initResult,computedNumber,currentRes);
 }
+
+// Exponent // 
+
+
 function exponent(){
     const computedNumber = getUserInput();
     const initResult = currentRes;
@@ -65,6 +74,8 @@ function exponent(){
     outputValue(initResult,'**',computedNumber);
     writeOperationsLog ("Exponent",initResult,computedNumber,currentRes);
 }
+
+// Clear //
 function clear() {
     currentRes = 0;
     inputNumber.value = 0;
@@ -74,7 +85,7 @@ function clear() {
 }
 
 
-
+// Event listeners //
 
 
 btnAdd.addEventListener('click', add);
